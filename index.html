@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог фільмів та серіалів (TMDb)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🎬 Пошук фільмів та серіалів (TMDb)</h1>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Введіть назву фільму або серіалу..." autocomplete="off">
+        <button id="search-btn">Пошук</button>
+        <ul id="suggestions" class="suggestions" hidden></ul>
+      </div>
+      <p id="status" class="status" role="status"></p>
+    </section>
+
+    <section>
+      <div id="results" class="grid"></div>
+    </section>
+  </main>
+
+  <dialog id="details-dialog">
+    <button id="close-btn" class="close-btn" aria-label="Закрити">✕</button>
+    <div id="dialog-body"></div>
+  </dialog>
+
+  <footer>
+    <p>&copy; 2026 Лабораторна робота №2, варіант 10. Дані: TMDb API</p>
+  </footer>
+
+  <script src="https://unpkg.com/rxjs@7.8.1/dist/bundles/rxjs.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
